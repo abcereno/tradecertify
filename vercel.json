@@ -4,15 +4,11 @@
 
   "redirects": [
     {
-      "source": "https://www.tradecertify.com.au/:path*",
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.tradecertify.com.au" }],
       "destination": "https://tradecertify.com.au/:path*",
       "permanent": true
-    },
-
-    { "source": "/services", "destination": "/#services", "permanent": true },
-    { "source": "/contact",  "destination": "/#contact",  "permanent": true },
-    { "source": "/category/:slug*", "destination": "/resources/:slug*", "permanent": true },
-    { "source": "/blog/:slug*",     "destination": "https://blog.tradecertify.com.au/:slug*", "permanent": true }
+    }
   ],
 
   "rewrites": [
