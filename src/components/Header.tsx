@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import RplCtaButton from './RplCtaButton';
 import logo from "../assets/logo.png";
+import { useGtagConversion } from "@/hooks/useGtagConversion";
 const Header: React.FC = () => {
 
+  const { triggerConversion } = useGtagConversion();
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +25,17 @@ const Header: React.FC = () => {
 </nav>
 
           <div className="flex items-center space-x-4">
-            <p>📞 1300 403 081</p>
+            <p>  <a
+        href="tel:1300403081"
+        onClick={(e) => {
+          e.preventDefault();
+          triggerConversion("tel:1300403081");
+        }}
+        className="text-blue-600 hover:underline"
+      >
+        📞 1300 403 081
+      </a>
+  </p>
             <RplCtaButton
   label="Get Started"
   size="sm"
