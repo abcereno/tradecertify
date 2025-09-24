@@ -17,6 +17,7 @@ const AppLayout: React.FC = () => {
   return (
     <>
         <Hero />
+          <Testimonials />
     <Container>
         <Marquee />
     </Container>
@@ -42,7 +43,6 @@ const AppLayout: React.FC = () => {
         <Stats />
         <Container>
         <Process />
-        <Testimonials />
         </Container>
         <CTA />
     </>
