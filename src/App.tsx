@@ -15,6 +15,7 @@ import GlobalFetchingToast from "./components/loader/GlobalFetchingToast";
 import Header from "@/components/Header";
 import Footer from "./components/Footer";
 import ChatWidgetLoader from "./components/ChatWidgetLoader";
+import AlertBanner from "./components/AlertBanner";
 
 // --- PERFORMANCE: Use React.lazy directly. The artificial delay is removed. ---
 const Index = lazy(() => import("@/pages/Index"));
@@ -33,6 +34,7 @@ const queryClient = new QueryClient();
 // --- OPTIMIZATION: Create a clean MainLayout component ---
 const MainLayout = ({ children }: { children: React.ReactNode }) => (
   <>
+  <AlertBanner />
     <Header />
     <ScrollToHashElement />
     <main>{children}</main>
