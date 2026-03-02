@@ -46,12 +46,12 @@ const Hero: React.FC = () => {
               formSrc="https://api.leadconnectorhq.com/widget/survey/hMCYKu5d6Ir83sjyduPH"
               title="Check Your Eligibility Now"
             />
-            <Link
+            {/* <Link
               to="/booking"
               className="border-2 border-white hover:bg-white hover:text-slate-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors text-center"
             >
               Book a Call
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
